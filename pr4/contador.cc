@@ -87,7 +87,7 @@ bool Contador::undo(const int nOperations) {
     if(nOperations>(int)values_.size() || nOperations<1) {
         return false;
     }
-    for(int i = 0; i < nOperations-1; i++) {
+    for(int i = 1; i < nOperations; i++) {
         values_.pop_back();
     }
     this->valor_=values_.back();
